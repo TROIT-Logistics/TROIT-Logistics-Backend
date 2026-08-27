@@ -1,0 +1,24 @@
+# Generated Rust Build Artifacts
+/target
+Cargo.lock
+
+# Environment & Secret Files
+.env
+.env.local
+.env.*.local
+
+# Database Data Directories (Local Development)
+.pg_data/
+*.sqlite
+*.db
+
+# OS & IDE Files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.tmp
+
+# Test & Log Files
+*.log
+logs/

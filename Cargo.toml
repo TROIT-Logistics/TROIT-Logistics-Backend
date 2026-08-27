@@ -1,0 +1,44 @@
+[package]
+name = "troit-logistics-backend"
+version = "0.1.0"
+edition = "2021"
+authors = ["TROIT Logistics Team <dev@troitlogistics.com>"]
+description = "Backend REST API service foundation for TROIT Logistics trust and logistics platform."
+
+[dependencies]
+# Web Framework & Async Runtime
+axum = "0.7.5"
+tokio = { version = "1.38", features = ["full"] }
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Serialization & Validation
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+validator = { version = "0.18", features = ["derive"] }
+
+# Database & Migrations
+sqlx = { version = "0.8.0", features = [
+  "runtime-tokio-rustls",
+  "postgres",
+  "uuid",
+  "chrono",
+  "json",
+  "migrate"
+] }
+
+# Security & Authentication
+argon2 = "0.5.3"
+jsonwebtoken = "9.3.0"
+
+# Logging & Observability
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+
+# Utilities & Error Handling
+dotenvy = "0.15.7"
+thiserror = "1.0.61"
+uuid = { version = "1.8.0", features = ["v4", "serde"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+
+[dev-dependencies]
+reqwest = { version = "0.12", features = ["json"] }
