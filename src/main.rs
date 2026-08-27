@@ -4,7 +4,10 @@ mod db;
 mod errors;
 mod middleware;
 mod models;
+mod orders;
+mod products;
 mod routes;
+mod seed;
 mod services;
 mod utils;
 
